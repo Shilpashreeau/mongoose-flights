@@ -4,14 +4,14 @@ function New(){
 return(
     <div>
         <h1>New Flight Page</h1>
-        <form action="/fruits" method='POST'>
+        <form action="/flights" method='POST'>
 
            Airline Name:<input type="text" name="airline"/>
             <br/>
             Flight No:<input type="text" name="flightNo"/>
             <br/>
-           Departs at:<input type="text" name="departs"/>
-            <input type="submit" value="Create new fruit"/>
+           Departs at:<input type="datetime-local" name="departs"/>
+            <input type="submit" value="Create new flight"/>
             
         </form>
     </div>

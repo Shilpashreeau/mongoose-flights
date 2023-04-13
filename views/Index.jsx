@@ -13,9 +13,10 @@ function Index(props) {
         {flights.map((flight, i) => {
           return (
             <li key={flight._id}>
-                {flight.airline}
-                {flight.flightNo}
-                {flight.departs}
+              Airline Name:  {flight.airline}<br/>
+              Flight Number:  {flight.flightNo}<br/>
+
+             Date:  {new Date(Date(flight.departs)).toLocaleDateString()}
             </li>
           );
         })}

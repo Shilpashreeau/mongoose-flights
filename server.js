@@ -17,6 +17,12 @@ app.use((req, res, next) => {
   });
   app.use(express.urlencoded({ extended: false }));
 
+  //* GET
+  app.get('/',(req,res)=>{
+res.send("<h1>Welcome to flight depot!</h1>")
+})
+
+
 
   //* query all documents and return the selected fields
   app.get("/flights", (req, res) => {
@@ -29,7 +35,7 @@ app.use((req, res, next) => {
 //* post flights
 
   app.post("/flights", (req, res) => {
-    console.log(req.body);
+    //console.log(req.body);
    
  
    
@@ -41,6 +47,16 @@ app.use((req, res, next) => {
     })
     
   });
+  app.get("/flights/new", (req, res) => {
+    res.render("New");
+  });
+
+  app.get('*',(req,res)=>{
+   
+    
+  res.render('404');
+  
+  })
 
   app.listen(3000, () => {
     console.log("Server is up!");
