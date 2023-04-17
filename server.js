@@ -26,7 +26,7 @@ res.send("<h1>Welcome to flight depot!</h1>")
 
   //* query all documents and return the selected fields
   app.get("/flights", (req, res) => {
-    console.log(req);
+    //console.log(req);
    
     Flight.find({},(error,allFlights)=>{
     res.render('Index',{flights:allFlights})
